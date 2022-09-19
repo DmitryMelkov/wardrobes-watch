@@ -350,7 +350,8 @@ input {
 }
 
 .number__span {
-  padding-left: 30px;
+  position: relative;
+  margin-left: 30px;
   font-size: 16px;
   line-height: 16px;
   color: #fff;
@@ -806,11 +807,10 @@ input:focus-visible {
 
 .calculation__btn-download {
   display: block;
-  max-width: 230px;
   position: relative;
   margin-bottom: 25px;
-  margin-left: 50px;
-  padding: 20px 30px 20px 50px;
+  margin-left: 77px;
+  padding: 35px 30px 20px 56px;
   font-size: 14px;
   line-height: 14px;
   color: #2f6dc6;
@@ -821,16 +821,16 @@ input:focus-visible {
   -webkit-transition: background-image 0.9s ease-in-out;
   -o-transition: background-image 0.9s ease-in-out;
   transition: background-image 0.9s ease-in-out;
-  width: 320px;
-  height: 55px;
+  width: 230px;
+  height: 82px;
   border-radius: 10px;
 }
 
 .calculation__btn-download::before {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 26px;
+  left: 26px;
   background-image: url("../img/calculation-icon-1.png");
   background-position: left;
   background-repeat: no-repeat;
@@ -841,14 +841,16 @@ input:focus-visible {
 
 .calculation__btn-click {
   position: relative;
-  max-width: 353px;
+  width: 353px;
+  height: 87px;
+  margin-left: 25px;
 }
 
 .calculation__btn-click::before {
   content: "";
   position: absolute;
-  top: 16px;
-  left: 20px;
+  top: 30px;
+  left: 25px;
   background-image: url("../img/intro-btn-icon.png");
   background-position: left;
   background-repeat: no-repeat;
@@ -858,6 +860,7 @@ input:focus-visible {
 }
 
 .example {
+  position: relative;
   background-color: #f4ebe1;
 }
 
@@ -1095,7 +1098,7 @@ input:focus-visible {
 .our-works__bg-two {
   position: absolute;
   bottom: 0;
-  left: 201px;
+  left: -201px;
   background-image: url("../img/our-works-bg-two.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -1111,6 +1114,7 @@ input:focus-visible {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: relative;
 }
 
 .our-works__list {
@@ -1157,16 +1161,17 @@ input:focus-visible {
 }
 
 .about-us {
+  padding-top: 90px;
+  padding-bottom: 150px;
   background-image: url("../img/about-us-bg.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   width: 100%;
-  height: 718px;
+  height: auto;
 }
 
 .about-us__header {
-  padding-top: 90px;
   padding-bottom: 40px;
   color: #fff;
   text-align: center;
@@ -1178,18 +1183,25 @@ input:focus-visible {
 }
 
 .about-us__content {
-  margin-top: 76px;
+  margin: 76px auto 0;
+  max-width: 700px;
+  display: -ms-grid;
+  display: grid;
+  gap: 50px;
+  -ms-grid-columns: (4fr)[8];
+  grid-template-columns: repeat(8, 4fr);
+}
+
+.about-us__item {
+  position: relative;
+  -ms-grid-column-span: 4;
+  grid-column: span 4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.about-us__item {
-  position: relative;
-  margin-right: 100px;
 }
 
 .about-us__item-content {
@@ -1452,12 +1464,13 @@ input:focus-visible {
 
 .order {
   padding-top: 100px;
+  padding-bottom: 100px;
   background-image: url("../img/about-us-bg.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   width: 100%;
-  height: 818px;
+  height: auto;
 }
 
 .order__header {
@@ -1655,6 +1668,17 @@ input:focus-visible {
     color: #2f6dc6;
   }
 
+  .number__span:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #2f6dc6;
+    z-index: 1;
+  }
+
   input:hover {
     border: 1px solid #2f6dc6;
   }
@@ -1697,8 +1721,8 @@ input:focus-visible {
     width: 235px;
     height: 75px;
     color: #fff;
-    width: 320px;
-    height: 55px;
+    width: 230px;
+    height: 82px;
   }
 
   .calculation__btn-download:hover::before {
@@ -1818,6 +1842,14 @@ input:focus-visible {
     margin-bottom: 30px;
   }
 
+  .intro__right {
+    display: none;
+  }
+
+  .intro__left {
+    width: 60%;
+  }
+
   .calculation {
     padding-top: 334px;
   }
@@ -1841,6 +1873,8 @@ input:focus-visible {
 
   .example__calculation-bg-container {
     padding-top: 134px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .example__btn {
@@ -1883,6 +1917,14 @@ input:focus-visible {
     grid-template-columns: repeat(6, 3fr);
   }
 
+  .about-us__content {
+    max-width: 500px;
+  }
+
+  .about-us__item-content {
+    left: 0;
+  }
+
   .brands__content {
     -ms-grid-columns: (3fr)[9];
     grid-template-columns: repeat(9, 3fr);
@@ -1902,10 +1944,6 @@ input:focus-visible {
     line-height: 25px;
   }
 
-  .order {
-    height: 1060px;
-  }
-
   .order__content {
     -ms-grid-columns: (3fr)[6];
     grid-template-columns: repeat(6, 3fr);
@@ -1916,10 +1954,9 @@ input:focus-visible {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .logo__footer {
-    margin-bottom: 20px;
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 30px;
   }
 
   .footer__privacy-policy {
@@ -1931,6 +1968,29 @@ input:focus-visible {
 
   .footer__privacy-policy-span-1 {
     text-align: center;
+  }
+
+  .footer__address {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer__address-city {
+    margin-bottom: 25px;
+  }
+
+  .logo__img-pic-footer {
+    width: 164px;
+    height: 94px;
+  }
+
+  .logo__footer {
+    margin-bottom: 40px;
   }
 }
 
@@ -1959,10 +2019,6 @@ input:focus-visible {
     width: 100%;
   }
 
-  .intro__right {
-    display: none;
-  }
-
   .intro__span {
     font-size: 24px;
   }
@@ -1980,11 +2036,6 @@ input:focus-visible {
     padding-top: 200px;
   }
 
-  .calculation__header,
-  .calculation__descr {
-    text-align: center;
-  }
-
   .calculation__label {
     text-align: center;
   }
@@ -1995,10 +2046,6 @@ input:focus-visible {
 
   .calculation__btn-download {
     margin: 0 auto 20px;
-  }
-
-  .about-us__item-content {
-    left: 0;
   }
 
   .brands__content {
@@ -2061,9 +2108,20 @@ input:focus-visible {
             flex-direction: column;
   }
 
+  .number__footer {
+    position: absolute;
+    top: 74%;
+    left: 26%;
+  }
+
   .number__phone {
     font-size: 16px;
     line-height: 16px;
+  }
+
+  .number__phone-footer {
+    font-size: 23px;
+    line-height: 23px;
   }
 
   .number__span {
@@ -2076,7 +2134,7 @@ input:focus-visible {
   }
 
   .header__btn {
-    bottom: -300px;
+    bottom: -323px;
   }
 
   .header__btn-click {
@@ -2109,8 +2167,141 @@ input:focus-visible {
     font-size: 17px;
   }
 
+  .intro__left {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .intro__header {
+    max-width: 355px;
+  }
+
   .calculation {
     padding-top: 422px;
+  }
+
+  .example__header {
+    padding-top: 50px;
+  }
+
+  .example__descr {
+    padding-top: 20px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .example__cards-content {
+    -ms-grid-columns: (3fr)[3];
+    grid-template-columns: repeat(3, 3fr);
+  }
+
+  .example__item {
+    text-align: center;
+  }
+
+  .example__item-bg {
+    left: 30%;
+  }
+
+  .example__calculation-bg {
+    background-image: url("../img/example-calculation-460.png");
+    width: 460px;
+    height: 531px;
+  }
+
+  .our-works__content {
+    gap: 40px;
+    -ms-grid-columns: (3fr)[3];
+    grid-template-columns: repeat(3, 3fr);
+  }
+
+  .our-works__descr {
+    margin: 20px 0;
+  }
+
+  .about-us {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .about-us__header {
+    max-width: 350px;
+    padding-bottom: 25px;
+  }
+
+  .about-us__content {
+    margin-top: 40px;
+    -ms-grid-columns: (4fr)[4];
+    grid-template-columns: repeat(4, 4fr);
+  }
+
+  .about-us__item {
+    margin-right: 0;
+    margin-bottom: 64px;
+  }
+
+  .about-us__item-content {
+    left: 100px;
+  }
+
+  .choice-color {
+    padding-top: 50px;
+  }
+
+  .choice-color__content-two {
+    padding-top: 608px;
+  }
+
+  .choice-color__bg {
+    position: absolute;
+    top: 567px;
+  }
+
+  .choice-color__bg-container {
+    padding-left: 50px;
+    height: 703px;
+  }
+
+  .choice-color__bg-content-one {
+    margin-bottom: 25px;
+  }
+
+  .choice-color__bg-content-two {
+    -ms-grid-columns: (3fr)[9];
+    grid-template-columns: repeat(9, 3fr);
+  }
+
+  .choice-color__bg-content-one-span,
+  .choice-color__bg-header,
+  .choice-color__bg-content-one-logo {
+    text-align: center;
+  }
+
+  .choice-color__content-two-box {
+    gap: 50px;
+    -ms-grid-columns: (3fr)[3];
+    grid-template-columns: repeat(3, 3fr);
+  }
+
+  .order__content {
+    -ms-grid-columns: (3fr)[3];
+    grid-template-columns: repeat(3, 3fr);
+  }
+
+  .footer__btn {
+    position: absolute;
+    top: 33%;
+    left: 30%;
+  }
+
+  .footer__address {
+    margin-bottom: 60px;
+  }
+
+  .logo__footer {
+    margin-top: 0;
+    margin-bottom: 100px;
   }
 }
 
@@ -2202,4 +2393,9 @@ input:focus-visible {
 @media (max-width: 768px) {
 
   .webp .choice-color__bg-container { background-image: url(../img/choice-color-bg-768.webp); }
+}
+
+@media (max-width: 620px) {
+
+  .webp .example__calculation-bg { background-image: url(../img/example-calculation-460.webp); }
 }
