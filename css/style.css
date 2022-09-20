@@ -181,6 +181,7 @@ h2 {
 }
 
 input {
+  border: 1px solid #c6c0b9;
   -webkit-transition: border 0.3s ease-in-out;
   -o-transition: border 0.3s ease-in-out;
   transition: border 0.3s ease-in-out;
@@ -1160,6 +1161,72 @@ input:focus-visible {
   color: #fff;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 111;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__content {
+  position: relative;
+  background-color: #f4ebe1;
+  margin: 15% auto;
+  padding: 46px 27px;
+  border: 1px solid #888;
+  width: 50%;
+  height: auto;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal__content-title {
+  margin-left: 50px;
+}
+
+.modal__content-descr {
+  margin-left: 50px;
+}
+
+.modal__form {
+  width: 80%;
+  margin-left: 50px;
+}
+
+.modal__form-input {
+  margin-bottom: 20px;
+  padding-left: 25px;
+  width: 100%;
+  height: 61px;
+  border-radius: 10px;
+}
+
+.modal__privacy-span {
+  color: #2f6dc6;
+  text-decoration: underline;
+}
+
+.modal__calculation {
+  margin-left: 0;
+}
+
+.modal.open {
+  display: block;
+}
+
 .about-us {
   padding-top: 90px;
   padding-bottom: 150px;
@@ -1915,6 +1982,45 @@ input:focus-visible {
   .our-works__content {
     -ms-grid-columns: (3fr)[6];
     grid-template-columns: repeat(6, 3fr);
+  }
+
+  .modal__content {
+    width: 414px;
+  }
+
+  .modal__content-title {
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+  }
+
+  .modal__content-descr {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .modal__form,
+  .modal__content-descr,
+  .modal__content-title {
+    margin-left: 0;
+  }
+
+  .modal__form {
+    width: 363px;
+  }
+
+  .modal__privacy {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .modal__btn-submit {
+    width: 100%;
+  }
+
+  .modal__calculation {
+    margin: 0 auto;
   }
 
   .about-us__content {
