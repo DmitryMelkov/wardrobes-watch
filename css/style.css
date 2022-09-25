@@ -2359,6 +2359,7 @@ input:focus-visible {
   .about-us {
     padding-top: 40px;
     padding-bottom: 60px;
+    background-image: url("../img/about-us-bg-460.png");
   }
 
   .about-us__header {
@@ -2418,6 +2419,11 @@ input:focus-visible {
     gap: 50px;
     -ms-grid-columns: (3fr)[3];
     grid-template-columns: repeat(3, 3fr);
+  }
+
+  .choice-color__bg-item-span {
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .order__content {
@@ -2540,4 +2546,9 @@ input:focus-visible {
 @media (max-width: 620px) {
 
   .webp .example__calculation-bg { background-image: url(../img/example-calculation-460.webp); }
+}
+
+@media (max-width: 620px) {
+
+  .webp .about-us { background-image: url(../img/about-us-bg-460.webp); }
 }
