@@ -536,7 +536,7 @@ input:focus-visible {
   font-size: 24px;
   line-height: 24px;
   font-weight: 500;
-  color: #9f9c9c;
+  color: #aeafb2;
 }
 
 .intro__right {
@@ -993,6 +993,7 @@ input:focus-visible {
 .our-works {
   position: relative;
   padding-top: 270px;
+  background-image: url("../img/our-works-bg.png");
 }
 
 .our-works__bg-one {
@@ -1099,7 +1100,7 @@ input:focus-visible {
 .our-works__bg-two {
   position: absolute;
   bottom: 0;
-  left: -201px;
+  left: -266px;
   background-image: url("../img/our-works-bg-two.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -1109,6 +1110,7 @@ input:focus-visible {
 }
 
 .our-works__container-two {
+  padding-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1116,6 +1118,10 @@ input:focus-visible {
       -ms-flex-pack: end;
           justify-content: flex-end;
   position: relative;
+}
+
+.our-works__content-two {
+  margin-right: 100px;
 }
 
 .our-works__list {
@@ -1176,11 +1182,13 @@ input:focus-visible {
 .modal__content {
   position: relative;
   background-color: #f4ebe1;
+  background-image: url("../img/modal-bg.png");
   margin: 15% auto;
   padding: 46px 27px;
   border: 1px solid #888;
-  width: 50%;
+  width: 694px;
   height: auto;
+  border-radius: 20px;
 }
 
 .modal__close {
@@ -1194,24 +1202,34 @@ input:focus-visible {
 }
 
 .modal__content-title {
-  margin-left: 50px;
+  text-align: center;
 }
 
 .modal__content-descr {
-  margin-left: 50px;
+  text-align: center;
 }
 
 .modal__form {
-  width: 80%;
-  margin-left: 50px;
+  width: 100%;
+}
+
+.modal__form-label {
+  text-align: center;
 }
 
 .modal__form-input {
   margin-bottom: 20px;
   padding-left: 25px;
-  width: 100%;
+  width: 394px;
   height: 61px;
   border-radius: 10px;
+}
+
+.modal__privacy {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .modal__privacy-span {
@@ -1220,7 +1238,13 @@ input:focus-visible {
 }
 
 .modal__calculation {
-  margin-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal__btn-submit {
+  width: 361px;
+  margin: 0 auto;
 }
 
 .modal.open {
@@ -1387,6 +1411,7 @@ input:focus-visible {
   padding-top: 87px;
   padding-bottom: 80px;
   background-color: #f4ebe1;
+  background-image: url("../img/our-works-bg.png");
 }
 
 .choice-color__content-one {
@@ -1986,6 +2011,7 @@ input:focus-visible {
 
   .modal__content {
     width: 414px;
+    background-image: none;
   }
 
   .modal__content-title {
@@ -2008,6 +2034,10 @@ input:focus-visible {
 
   .modal__form {
     width: 363px;
+  }
+
+  .modal__form-input {
+    width: 100%;
   }
 
   .modal__privacy {
@@ -2447,6 +2477,8 @@ input:focus-visible {
 
 .webp .example__calculation-bg { background-image: url(../img/example-calculation.webp); }
 
+.webp .our-works { background-image: url(../img/our-works-bg.webp); }
+
 .webp .our-works__bg-one { background-image: url(../img/our-works-bg-one.webp); }
 
 .webp .our-works__span-size::before { background-image: url(../img/our-works-icon-1.webp); }
@@ -2457,11 +2489,15 @@ input:focus-visible {
 
 .webp .our-works__list-item::before { background-image: url(../img/our-works-icon-3.webp); }
 
+.webp .modal__content { background-image: url(../img/modal-bg.webp); }
+
 .webp .about-us { background-image: url(../img/about-us-bg.webp); }
 
 .webp .about-us__name { background-image: url(../img/about-us-name.webp); }
 
 .webp .about-us__spec { background-image: url(../img/about-us-speciality.webp); }
+
+.webp .choice-color { background-image: url(../img/our-works-bg.webp); }
 
 .webp .choice-color__bg-container { background-image: url(../img/choice-color-bg.webp); }
 
